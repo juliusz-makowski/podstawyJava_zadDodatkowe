@@ -5,7 +5,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        addString("1;6;3");
+        for (int i=0; i<10; i++) {
+            int number = showFiboNumber(i);
+            System.out.println(number);
+        }
+
     }
     public static void addString(String s){
         boolean x = false;
@@ -31,5 +35,14 @@ public class Main {
             }
         }
         System.out.println("suma podanych liczb = " + sum);
+    }
+    // task B
+    public static int showFiboNumber(int n){
+
+        if (n == 0) return 0;
+        else if (n == 1) return 1;
+        else {
+            return showFiboNumber(n-1) + showFiboNumber(n - 2);
+        }
     }
 }
